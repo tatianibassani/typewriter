@@ -1,10 +1,13 @@
 const sentence = (text) => {
- for (let i = 0; i < text.length; i++) {
-  setTimeout(() => {
-    console.log(text.charAt(i));
-  }, i * 1000) // <= 1s delay to make it noticeable. Can dial it down later.
-  //process.stdout.write(char);
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(() => {
+      console.log(text.charAt(i));
+    }, i * 50) // <= 1s delay to make it noticeable. Can dial it down later.
+    //process.stdout.write(char);
   }
+  setTimeout(() => {
+    console.log('\n');
+  }, text.length * 50)
 };
 
 sentence('Lighthouse bootcamp');
